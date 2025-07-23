@@ -1,15 +1,27 @@
 <!doctype html>
-<html>
+<html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <title>Administração – Cinema Fantasma</title>
+    <title>Administração – Cinema Fantasma</title>
 
-    <!-- carrega Decap CMS (novo Netlify CMS) -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Decap CMS (carrega 1 ficheiro JS, mais simples do que o bundle antigo “netlify‑cms.js”) -->
+    <script src="https://unpkg.com/decap-cms@^3.8.2/dist/decap-cms.js"></script>
+
+    <!-- Dizemos ao CMS que vamos arrancar manualmente no fim da página -->
+    <script>window.CMS_MANUAL_INIT = true;</script>
   </head>
 
   <body>
-    <!-- NC root onde o CMS injecta a interface -->
+    <!-- É aqui que o CMS injecta toda a interface React -->
     <div id="nc-root"></div>
+
+    <script>
+      /* Quando a bundle JS estiver carregada, arrancamos */
+      if (window.CMS) {
+        CMS.init();          // já disponível
+      } else {
+        window.addEventListener('load', () => CMS.init());
+      }
+    </script>
   </body>
 </html>
