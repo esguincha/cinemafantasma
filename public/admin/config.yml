@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: main
@@ -7,13 +6,12 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "filmes"
-    label: "Filmes"
-    folder: "public/filmes"
+  - name: "posts"
+    label: "Publicações"
+    folder: "public/posts"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição", name: "body", widget: "text" }
-      - { label: "Imagem (URL)", name: "imagem", widget: "string" }
-      - { label: "Link de Visualização", name: "link", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
