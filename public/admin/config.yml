@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: esguincha/cinemafantasma
   branch: main
+  client_id: 0v23linnntbnI5TFMTEm
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
