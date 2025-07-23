@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Administração - Cinema Fantasma</title>
-    <!-- Decap CMS (Netlify CMS) CDN -->
     <script src="https://unpkg.com/decap-cms@3.8.2/dist/decap-cms.js"></script>
+    <!-- Teste: -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.CMS) {
+          document.body.style.background = "#222"; // Só para ver se corre.
+        }
+      });
+    </script>
   </head>
   <body>
-    <!-- Root onde o CMS vai injetar a interface -->
     <div id="nc-root"></div>
   </body>
 </html>
