@@ -1,42 +1,19 @@
-#######################
-# 1) Backend (GitHub) #
-#######################
 backend:
   name: github
-  repo: esguincha/cinemafantasma   # <‑‑  usa o teu “utilizador/repo”
+  repo: esguincha/cinemafantasma
   branch: main
-  site_domain: cinemafantasma.netlify.app   # ajuda em pré‑visualizações
 
-publish_mode: editorial_workflow      # permite rascunhos / revisões
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
-##############################
-# 2) Uploads & media previews #
-##############################
-media_folder: "public/uploads"   # ficheiros vão para o repositório
-public_folder: "/uploads"        # URL que o site servir
-
-#########################
-# 3) Coleções de Conteúdo
-#########################
 collections:
-  - name: "posts"            # -> public/posts/yyyymmdd‑slug.md
+  - name: "posts"
     label: "Publicações"
     folder: "public/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título",     name: title,  widget: string }
-      - { label: "Data",       name: date,   widget: datetime }
-      - { label: "Conteúdo",   name: body,   widget: markdown }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
 
-# Exemplo adicional (filmes) – descomenta se quiseres:
-#  - name: "filmes"
-#    label: "Filmes"
-#    folder: "public/filmes"
-#    create: true
-#    slug: "{{slug}}"
-#    fields:
-#      - { label: "Título",        name: title,    widget: string }
-#      - { label: "Descrição",     name: body,     widget: text }
-#      - { label: "Imagem (URL)",  name: imagem,   widget: string }
-#      - { label: "Link vídeo",    name: link,     widget: string }
