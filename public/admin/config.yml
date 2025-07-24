@@ -2,7 +2,7 @@ backend:
   name: github
   repo: esguincha/cinemafantasma
   branch: main
-  client_id: 0v23linnntbnI5TFMTEm
+  client_id: Ov23linnntbnI5TFMTEm
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -17,4 +17,5 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+
 
